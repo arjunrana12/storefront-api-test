@@ -7,29 +7,45 @@ import 'swiper/css/pagination';
 
 import '~/styles/swiper-section.css';
 
-interface Collection {
-  id: string;
-  title: string;
-  handle: string;
-  description?: string | null;
-  image?: {
-    url: string;
-    altText?: string | null;
-    width?: number | null;
-    height?: number | null;
-  } | null;
-}
+export function SwiperSection() {
+  const slides = [
+    {
+      id: 1,
+      image: '/images/banner-1.jpg',
+      title: 'New Collection',
+      description: 'Discover our latest collection',
+    },
+    {
+      id: 2,
+      image: '/images/banner-2.jpg',
+      title: 'Summer Sale',
+      description: 'Up to 50% off selected products',
+    },
+    {
+      id: 3,
+      image: '/images/banner-3.jpg',
+      title: 'New Arrivals',
+      description: 'Check out our newest products',
+    },
+    {
+      id: 4,
+      image: '/images/banner-4.jpg',
+      title: 'Best Sellers',
+      description: 'Shop our most popular products',
+    },
+    {
+      id: 5,
+      image: '/images/banner-5.jpg',
+      title: 'Special Offers',
+      description: 'Limited time offers',
+    },
+  ];
 
-interface SwiperSectionProps {
-  collections: Collection[];
-}
-
-export function SwiperSection({collections}: SwiperSectionProps) {
   return (
     <section className="swiper-section">
       <div className="swiper-container">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Pagination]}
           navigation
           pagination={{clickable: true}}
           autoplay={{
@@ -56,35 +72,23 @@ export function SwiperSection({collections}: SwiperSectionProps) {
             },
           }}
         >
-          {collections.map((collection) => (
-            <SwiperSlide key={collection.id}>
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
               <div className="swiper-card">
-
-                {collection.image && (
-                  <img
-                    src={collection.image.url}
-                    alt={
-                      collection.image.altText ||
-                      collection.title
-                    }
-                    width={collection.image.width || undefined}
-                    height={collection.image.height || undefined}
-                  />
-                )}
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                />
 
                 <div className="swiper-card-content">
-                  <h2>{collection.title}</h2>
+                  <h2>{slide.title}</h2>
 
-                  <p>
-                    {collection.description ||
-                      'Discover our collection'}
-                  </p>
+                  <p>{slide.description}</p>
 
-                  <a href={`/collections/${collection.handle}`}>
+                  <a href="/collections/all">
                     Shop Now
                   </a>
                 </div>
-
               </div>
             </SwiperSlide>
           ))}
