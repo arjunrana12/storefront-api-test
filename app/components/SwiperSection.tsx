@@ -11,31 +11,31 @@ export function SwiperSection() {
   const slides = [
     {
       id: 1,
-      image: '/images/banner-1.jpg',
+      image: '/images/banner-1.png',
       title: 'New Collection',
       description: 'Discover our latest collection',
     },
     {
       id: 2,
-      image: '/images/banner-2.jpg',
+      image: '/images/banner-2.png',
       title: 'Summer Sale',
       description: 'Up to 50% off selected products',
     },
     {
       id: 3,
-      image: '/images/banner-3.jpg',
+      image: '/images/banner-3.png',
       title: 'New Arrivals',
       description: 'Check out our newest products',
     },
     {
       id: 4,
-      image: '/images/banner-4.jpg',
+      image: '/images/banner-4.png',
       title: 'Best Sellers',
       description: 'Shop our most popular products',
     },
     {
       id: 5,
-      image: '/images/banner-5.jpg',
+      image: '/images/banner-5.png',
       title: 'Special Offers',
       description: 'Limited time offers',
     },
