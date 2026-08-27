@@ -3,6 +3,7 @@
     "checkJs": false,
     "target": "ES2022",
     "module": "ES2022",
+    "jsx": "preserve",
     "moduleResolution": "Bundler",
     "baseUrl": ".",
     "paths": {
@@ -20,6 +21,8 @@
     "*.jsx",
     "*.d.ts",
     ".graphqlrc.js",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".react-router/types/**/*"
   ]
 }

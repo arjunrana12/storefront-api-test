@@ -2,6 +2,9 @@ import {Await, useLoaderData, Link} from 'react-router';
 import {Suspense} from 'react';
 import {Image} from '@shopify/hydrogen';
 import {ProductItem} from '~/components/ProductItem';
+import {HeroSection} from '~/components/HeroSection';
+import {SwiperSection} from '~/components/SwiperSection';
+import {CollectionCard} from '~/components/Collection_Card';
 
 /**
  * @type {Route.MetaFunction}
@@ -64,13 +67,12 @@ export default function Homepage() {
   const data = useLoaderData();
   return (
     <div className="home">
-      <FeaturedCollection collection={data.featuredCollection} />
       <RecommendedProducts products={data.recommendedProducts} />
     </div>
   );
 }
 
-/**
+/*
  * @param {{
  *   collection: FeaturedCollectionFragment;
  * }}
@@ -88,7 +90,7 @@ function FeaturedCollection({collection}) {
           <Image data={image} sizes="100vw" />
         </div>
       )}
-      <h1>{collection.title}</h1>
+      { <h1>{collection.title}</h1> }
     </Link>
   );
 }
@@ -100,8 +102,9 @@ function FeaturedCollection({collection}) {
  */
 function RecommendedProducts({products}) {
   return (
-    <div className="recommended-products">
-      <h2>Recommended Products</h2>
+    <div className="main-div">
+    {/* <div className="recommended-products">
+      { <h2>Recommended Products</h2>
       <Suspense fallback={<div>Loading...</div>}>
         <Await resolve={products}>
           {(response) => (
@@ -114,9 +117,15 @@ function RecommendedProducts({products}) {
             </div>
           )}
         </Await>
-      </Suspense>
-      <br />
-    </div>
+      </Suspense> }
+
+      </div>  */}
+
+       <HeroSection />
+       <SwiperSection />
+       <CollectionCard />
+ </div>
+    
   );
 }
 
