@@ -5,37 +5,43 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+import banner1 from '~/assets/images/banner-1.png';
+import banner2 from '~/assets/images/banner-2.png';
+import banner3 from '~/assets/images/banner-3.png';
+import banner4 from '~/assets/images/banner-4.png';
+import banner5 from '~/assets/images/banner-5.png';
+
 import '~/styles/swiper-section.css';
 
 export function SwiperSection() {
   const slides = [
     {
       id: 1,
-      image: '/images/banner-1.png',
+      image: banner1,
       title: 'New Collection',
       description: 'Discover our latest collection',
     },
     {
       id: 2,
-      image: '/images/banner-2.png',
+      image: banner2,
       title: 'Summer Sale',
       description: 'Up to 50% off selected products',
     },
     {
       id: 3,
-      image: '/images/banner-3.png',
+      image: banner3,
       title: 'New Arrivals',
       description: 'Check out our newest products',
     },
     {
       id: 4,
-      image: '/images/banner-4.png',
+      image: banner4,
       title: 'Best Sellers',
       description: 'Shop our most popular products',
     },
     {
       id: 5,
-      image: '/images/banner-5.png',
+      image: banner5,
       title: 'Special Offers',
       description: 'Limited time offers',
     },
