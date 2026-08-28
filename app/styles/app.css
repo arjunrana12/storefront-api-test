@@ -16,8 +16,12 @@ h2 {
     font-size: 3.2rem;
 }
 
-.swiper-card-content h2{
+section.hero-section h2 {
     text-align: center;
+}
+
+.swiper-card-content h2{
+    text-align: left;
 }
 /*
 * --------------------------------------------------
