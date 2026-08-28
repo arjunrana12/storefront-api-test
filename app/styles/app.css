@@ -14,9 +14,11 @@ img {
 
 h2 {
     font-size: 3.2rem;
-    text-align: center;
 }
 
+.swiper-card-content h2{
+    text-align: center;
+}
 /*
 * --------------------------------------------------
 * Non anchor links
