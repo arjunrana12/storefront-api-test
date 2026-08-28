@@ -50,6 +50,8 @@ export function SwiperSection() {
   return (
     <section className="swiper-section">
       <div className="swiper-container">
+
+        <h2>Contact lenses for you</h2>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
