@@ -219,6 +219,11 @@ button.reset:hover:not(:has(> *)) {
   margin-left: auto;
 }
 
+.swiper-section .swiper-button-prev svg, .swiper-section .swiper-button-next svg {
+    width: 20px;
+    height: 20px;
+}
+
 .header-ctas > * {
   min-width: fit-content;
 }

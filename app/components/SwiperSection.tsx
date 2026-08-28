@@ -51,7 +51,7 @@ export function SwiperSection() {
     <section className="swiper-section">
       <div className="swiper-container">
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           navigation
           pagination={{clickable: true}}
           autoplay={{
