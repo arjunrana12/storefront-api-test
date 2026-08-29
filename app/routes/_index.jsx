@@ -123,7 +123,6 @@ function RecommendedProducts({products}) {
 
        <HeroSection />
        <SwiperSection />
-       <CollectionCard />
  </div>
     
   );
