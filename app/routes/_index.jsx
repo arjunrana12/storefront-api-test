@@ -4,7 +4,6 @@ import {Image} from '@shopify/hydrogen';
 import {ProductItem} from '~/components/ProductItem';
 import {HeroSection} from '~/components/HeroSection';
 import {SwiperSection} from '~/components/SwiperSection';
-import {CollectionCard} from '~/components/Collection_Card';
 
 /**
  * @type {Route.MetaFunction}
